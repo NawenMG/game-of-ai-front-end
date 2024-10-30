@@ -1,0 +1,105 @@
+<div id="blackContainer" class="bg-black w-screen h-screen flex items-center justify-center">
+  <div
+    id="orangeContainer"
+    class="bg-orange-500 w-[1325px] h-[650px] my-[85px] mx-[55px] flex flex-row items-center justify-center p-6"
+  >
+    <!-- Titolo Registrazione -->
+
+    <!--First icon-->
+    <i class="fa-solid fa-hat-wizard text-black text-[200px]"></i>
+
+    <div class="flex flex-col items-center justify-center p-6">
+      <h1 class="text-black font-extrabold text-[60px] text-center mb-4">REGISTRAZIONE</h1>
+      <!-- Modulo di Registrazione -->
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="w-[90%] max-w-[700px] flex flex-col space-y-3">
+
+        <!-- Campo Nome -->
+        <div>
+          <label for="firstName" class="block text-black text-base font-semibold">Nome:</label>
+          <input
+            type="text"
+            id="firstName"
+            formControlName="firstName"
+            class="border border-gray-300 rounded p-1 w-full"
+            placeholder="Inserisci il tuo nome"
+            required
+          />
+        </div>
+
+        <!-- Campo Cognome -->
+        <div>
+          <label for="lastName" class="block text-black text-base font-semibold">Cognome:</label>
+          <input
+            type="text"
+            id="lastName"
+            formControlName="lastName"
+            class="border border-gray-300 rounded p-1 w-full"
+            placeholder="Inserisci il tuo cognome"
+            required
+          />
+        </div>
+
+        <!-- Campo Username -->
+        <div>
+          <label for="username" class="block text-black text-base font-semibold">Username:</label>
+          <input
+            type="text"
+            id="username"
+            formControlName="username"
+            class="border border-gray-300 rounded p-1 w-full"
+            placeholder="Scegli un username"
+            required
+          />
+        </div>
+
+        <!-- Campo Email -->
+        <div>
+          <label for="email" class="block text-black text-base font-semibold">Email:</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="border border-gray-300 rounded p-1 w-full"
+            placeholder="Inserisci la tua email"
+            required
+          />
+        </div>
+
+        <!-- Campo Password -->
+        <div>
+          <label for="password" class="block text-black text-base font-semibold">Password:</label>
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            class="border border-gray-300 rounded p-1 w-full"
+            placeholder="Scegli una password"
+            required
+          />
+        </div>
+
+        <!-- Campo Immagine Profilo -->
+        <div>
+          <label for="profileImage" class="block text-black text-base font-semibold">Immagine Profilo:</label>
+          <input
+            type="file"
+            id="profileImage"
+            formControlName="profileImage"
+            class="border border-gray-300 rounded p-1 w-full"
+            accept="image/*"
+          />
+        </div>
+
+        <!-- Bottone di Invio -->
+        <button type="submit" class="bg-black text-orange-500 w-full h-[40px] rounded flex items-center justify-center text-[18px] font-bold mt-4">
+          REGISTRATI
+        </button>
+
+      </form>
+    </div>
+    <!--Second Icon-->
+    <i class="fa-solid fa-dragon text-black text-[200px]"></i>
+
+  </div>
+</div>
+

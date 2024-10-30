@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ErrorsComponent } from './errors/errors.component';
 import { LoadingComponent } from './loading/loading.component';
 import { LoginComponent } from './login/login.component';
+import { RegistrazioneComponent } from "./registrazione/registrazione.component";
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,8 @@ import { LoginComponent } from './login/login.component';
     ErrorsComponent,
     LoadingComponent,
     LoginComponent,
-
-
-  ],
+    RegistrazioneComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
