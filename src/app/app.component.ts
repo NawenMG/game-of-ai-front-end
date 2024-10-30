@@ -5,6 +5,7 @@ import { ErrorsComponent } from './errors/errors.component';
 import { LoadingComponent } from './loading/loading.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from "./registrazione/registrazione.component";
+import { ResultsComponent } from "./results/results.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { RegistrazioneComponent } from "./registrazione/registrazione.component"
     ErrorsComponent,
     LoadingComponent,
     LoginComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    ResultsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
