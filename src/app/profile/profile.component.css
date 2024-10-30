@@ -1,0 +1,14 @@
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-body.active {
+  max-height: 200px; /* Adatta questo valore in base alla lunghezza dei dettagli */
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-body.inactive {
+  display: none; /* Nasconde l'accordion chiuso */
+}

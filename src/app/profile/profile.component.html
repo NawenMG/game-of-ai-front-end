@@ -1,0 +1,24 @@
+<div class="bg-orange-500 w-screen h-screen flex flex-col items-center justify-start pt-1">
+  <div class="flex flex-row justify-center items-center">
+      <i class="fa-solid fa-face-dizzy text-black text-[75px] mx-4"></i>
+      <img [src]="urlImg" alt="Immagine rotonda" class="w-[175px] h-[175px] rounded-full mx-4">
+      <i class="fa-brands fa-freebsd text-black text-[75px] mx-4"></i>
+  </div>
+
+  <div class="w-screen bg-black text-white mt-2 pl-1">
+      <p>Dati dell'utente e storico delle simulazioni</p>
+  </div>
+
+  <!-- Griglia di Accordion 3x3 -->
+  <div class="grid grid-cols-3 gap-4 mt-4 w-full px-4">
+      <div *ngFor="let accordion of accordions; let i = index" class="accordion-item bg-black text-white rounded-lg shadow-lg">
+          <button class="accordion-header flex justify-between items-center w-full p-4 focus:outline-none" (click)="toggleAccordion(i)">
+              <span>{{ accordion.title }}</span>
+              <i class="fa-solid" [ngClass]="{'fa-chevron-down': !accordion.active, 'fa-chevron-up': accordion.active}"></i>
+          </button>
+          <div class="accordion-body" [ngClass]="{'active': accordion.active, 'inactive': !accordion.active}">
+              <p *ngFor="let detail of accordion.details">{{ detail }}</p>
+          </div>
+      </div>
+  </div>
+</div>

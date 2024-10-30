@@ -6,6 +6,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from "./registrazione/registrazione.component";
 import { ResultsComponent } from "./results/results.component";
+import { ProfileComponent } from "./profile/profile.component";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ResultsComponent } from "./results/results.component";
     LoadingComponent,
     LoginComponent,
     RegistrazioneComponent,
-    ResultsComponent
+    ResultsComponent,
+    ProfileComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
