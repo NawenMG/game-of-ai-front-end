@@ -1,8 +1,47 @@
 <div class="bg-black w-screen h-screen flex items-center justify-center" id="containerBlack">
-  <div class="bg-orange-500 p-4 mx-3 my-11 flex flex-col items-center justify-center w-[calc(100%-24px)] h-[calc(100%-88px)]" id="containerOrange">
-    <i class="fa-solid fa-circle-radiation text-black text-[468px] mb-[60px]"></i>
-    <button class="bg-black text-orange-500 w-[320px] h-[50px] rounded flex items-center justify-center text-[40px] font-bold">
+  <div
+    class="bg-orange-500 p-4 mx-3 my-11 flex flex-col items-center justify-center w-[calc(100%-24px)] h-[calc(100%-88px)] aos-init aos-animate"
+    id="containerOrange"
+    data-aos="zoom-in"
+    data-aos-duration="1500"
+    data-aos-delay="200">
+
+    <!-- Icona con effetto animato -->
+    <i
+      class="fa-solid fa-circle-radiation text-black text-[468px] mb-[60px] animate__animated animate__pulse animate__infinite animate__slower"
+      id="iconRadiation"
+      style="filter: drop-shadow(0px 0px 20px orange);">
+    </i>
+
+    <!-- Bottone ENTRA animato -->
+    <button
+      class="bg-black text-orange-500 w-[320px] h-[50px] rounded flex items-center justify-center text-[40px] font-bold hover:text-orange-300 hover:bg-gray-900 transition-colors duration-300 hover:shadow-[0px_0px_10px_#ff6600] animate__animated animate__bounceIn hvr-float"
+      id="enterButton"
+      routerLink="/login" >
       ENTRA
     </button>
   </div>
 </div>
+
+<script>
+  // Inizializzazione di AOS
+  AOS.init();
+
+  // Effetti GSAP
+  gsap.to("#iconRadiation", {
+    duration: 2,
+    rotate: 360,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+  });
+
+  gsap.from("#enterButton", {
+    duration: 1,
+    scale: 0.9,
+    repeat: -1,
+    yoyo: true,
+    ease: "bounce.inOut",
+    delay: 0.5
+  });
+</script>

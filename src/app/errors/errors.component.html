@@ -1,12 +1,50 @@
 <div class="bg-black w-screen h-screen flex flex-col items-center justify-center" id="containerBlack">
-  <i class="fa-solid fa-face-dizzy text-orange-500 text-[170px] mb-0 mt-2"></i>
-  <div class="bg-orange-500 mx-[420px] my-[200px] w-[600px] h-[423px] mt-1" id="containerOrange">
-    <h1 class="font-bold text-[40px] text-center">
+  <!-- Icona centrale animata -->
+  <i
+    class="fa-solid fa-face-dizzy text-orange-500 text-[170px] mb-0 mt-2 animate__animated animate__shakeY animate__infinite"
+    data-aos="fade-down"
+    data-aos-duration="1500"
+    data-aos-delay="200"
+    style="filter: drop-shadow(0px 0px 10px orange);"
+    id="iconDizzy">
+  </i>
+
+  <!-- Contenitore di errore con animazione di entrata e ombra arancione -->
+  <div
+    class="bg-orange-500 mx-[420px] my-[200px] w-[600px] h-[423px] mt-1 rounded-xl shadow-[0px_0px_20px_#ff6600] animate__animated animate__fadeInUp flex flex-col items-center justify-center"
+    id="containerOrange"
+    data-aos="zoom-in"
+    data-aos-duration="1000"
+    data-aos-delay="500">
+
+    <!-- Titolo e contenuto di errore -->
+    <h1 class="font-bold text-[40px] text-center text-black mb-4 animate__animated animate__rubberBand animate__delay-2s">
       {{errorTitle}}
     </h1>
-    <p class="pl-1">
+    <p class="text-black pl-4 pr-4 text-center text-[20px] animate__animated animate__fadeIn">
       {{errorContent}}
     </p>
   </div>
 </div>
 
+<script>
+  // Inizializzazione AOS
+  AOS.init();
+
+  // Effetti GSAP
+  gsap.to("#iconDizzy", {
+    duration: 1.5,
+    rotate: -15,
+    yoyo: true,
+    repeat: -1,
+    ease: "elastic.inOut"
+  });
+
+  gsap.from("#containerOrange", {
+    duration: 1,
+    scale: 0.8,
+    opacity: 0,
+    delay: 0.5,
+    ease: "power2.inOut"
+  });
+</script>

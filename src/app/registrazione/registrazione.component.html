@@ -20,7 +20,7 @@
             type="text"
             id="firstName"
             formControlName="firstName"
-            class="border border-gray-300 rounded p-1 w-full"
+            class="bg-black text-orange-500 placeholder-red-500 rounded p-1 w-full"
             placeholder="Inserisci il tuo nome"
             required
           />
@@ -33,7 +33,7 @@
             type="text"
             id="lastName"
             formControlName="lastName"
-            class="border border-gray-300 rounded p-1 w-full"
+            class="bg-black text-orange-500 placeholder-red-500 rounded p-1 w-full"
             placeholder="Inserisci il tuo cognome"
             required
           />
@@ -46,7 +46,7 @@
             type="text"
             id="username"
             formControlName="username"
-            class="border border-gray-300 rounded p-1 w-full"
+            class="bg-black text-orange-500 placeholder-red-500 rounded p-1 w-full"
             placeholder="Scegli un username"
             required
           />
@@ -59,7 +59,7 @@
             type="email"
             id="email"
             formControlName="email"
-            class="border border-gray-300 rounded p-1 w-full"
+            class="bg-black text-orange-500 placeholder-red-500 rounded p-1 w-full"
             placeholder="Inserisci la tua email"
             required
           />
@@ -72,7 +72,7 @@
             type="password"
             id="password"
             formControlName="password"
-            class="border border-gray-300 rounded p-1 w-full"
+            class="bg-black text-orange-500 placeholder-red-500 rounded p-1 w-full"
             placeholder="Scegli una password"
             required
           />
@@ -85,13 +85,14 @@
             type="file"
             id="profileImage"
             formControlName="profileImage"
-            class="border border-gray-300 rounded p-1 w-full"
+            class="bg-black rounded p-1 w-full"
             accept="image/*"
           />
         </div>
 
         <!-- Bottone di Invio -->
-        <button type="submit" class="bg-black text-orange-500 w-full h-[40px] rounded flex items-center justify-center text-[18px] font-bold mt-4">
+        <button type="submit" class="bg-black text-orange-500 w-full h-[40px] rounded flex items-center justify-center text-[18px] font-bold mt-4"
+        routerLink="/problems">
           REGISTRATI
         </button>
 

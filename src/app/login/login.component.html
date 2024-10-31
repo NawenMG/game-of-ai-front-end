@@ -1,71 +1,29 @@
-<div class="bg-black w-screen h-screen flex  justify-center" id="containerBlack">
-  <!-- Contenitore principale con una larghezza massima definita -->
-  <div class="flex items-center justify-between w-full ">
-    <!-- Icona di sinistra, distanziata di 10px dal bordo sinistro del contenitore -->
-    <i class="fa-solid fa-circle-radiation text-orange-500 text-[250px] ml-20 "></i>
+<div class="bg-black w-screen h-screen flex items-center justify-center" id="containerBlack">
+  <div
+    class="bg-orange-500 p-4 mx-3 my-11 flex flex-col items-center justify-center w-[calc(100%-24px)] h-[calc(100%-88px)] aos-init aos-animate"
+    id="containerOrange">
 
-    <!-- Container di login centrato -->
-    <div class="flex flex-col items-center">
-      <!-- Icona del teschio sopra il container di login -->
-      <i class="fa-solid fa-skull-crossbones text-orange-500 text-center text-[85px] mb-[10px]"></i>
-      <div class="bg-orange-500 w-[600px] h-[523px] flex flex-col items-center justify-center p-2" id="containerOrange" >
-        <h1 class="text-black font-extrabold text-[100px] text-center">LOGIN</h1>
+    <!-- Icona con effetto animato -->
+    <i
+      class="fa-solid fa-circle-radiation text-black text-[468px] mb-[60px] animate__animated animate__pulse animate__infinite animate__slower"
+      id="iconRadiation"
+      style="filter: drop-shadow(0px 0px 20px orange);">
+    </i>
 
-        <!-- Modulo di accesso -->
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-full flex flex-col space-y-4">
-          <!-- Campo Email -->
-          <div>
-            <label for="email" class="block text-black text-lg font-semibold">Email:</label>
-            <input
-              type="email"
-              id="email"
-              formControlName="email"
-              class="border border-gray-300 rounded p-2 w-full"
-              placeholder="Inserisci la tua email"
-              required
-            />
-            <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)" class="text-red-500">
-              <small *ngIf="loginForm.get('email')?.errors?.['required']">Email è richiesta.</small>
-              <small *ngIf="loginForm.get('email')?.errors?.['email']">Email non valida.</small>
-            </div>
-          </div>
+    <!-- Bottone ENTRA con routing a Login -->
+    <button
+      routerLink="/problems"
+      class="bg-black text-orange-500 w-[320px] h-[50px] rounded flex items-center justify-center text-[40px] font-bold hover:text-orange-300 hover:bg-gray-900 transition-colors duration-300 hover:shadow-[0px_0px_10px_#ff6600] animate__animated animate__bounceIn hvr-float"
+      id="enterButton">
+      ENTRA
+    </button>
 
-          <!-- Campo Password -->
-          <div>
-            <label for="password" class="block text-black text-lg font-semibold">Password:</label>
-            <input
-              type="password"
-              id="password"
-              formControlName="password"
-              class="border border-gray-300 rounded p-2 w-full"
-              placeholder="Inserisci la tua password"
-              required
-            />
-            <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)" class="text-red-500">
-              <small *ngIf="loginForm.get('password')?.errors?.['required']">Password è richiesta.</small>
-              <small *ngIf="loginForm.get('password')?.errors?.['minlength']">La password deve avere almeno 6 caratteri.</small>
-            </div>
-          </div>
-
-          <!-- Bottone Password Dimenticata -->
-          <a href="#" class="text-black hover:underline">Password/Email dimenticata?</a>
-
-          <!-- Bottone di Invio -->
-          <button type="submit" class="bg-black text-orange-500 w-full h-[50px] rounded flex items-center justify-center text-[20px] font-bold">
-            ACCEDI
-          </button>
-
-          <!-- Bottone Registrati -->
-          <button type="button" class="bg-black text-orange-500 w-full h-[50px] rounded flex items-center justify-center text-[20px] font-bold">
-            REGISTRATI
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Icona di destra, distanziata di 10px dal bordo destro del contenitore -->
-    <i class="fa-solid fa-circle-radiation text-orange-500 text-[250px] mr-20"></i>
+    <button
+      routerLink="/registrazione"
+      class="bg-black text-orange-500 w-[320px] h-[50px] rounded flex items-center justify-center text-[40px] font-bold hover:text-orange-300 hover:bg-gray-900 transition-colors duration-300 hover:shadow-[0px_0px_10px_#ff6600] animate__animated animate__bounceIn hvr-float"
+      id="enterButton">
+      REGISTRATI
+    </button>
   </div>
 </div>
-
 

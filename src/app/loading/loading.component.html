@@ -1,3 +1,32 @@
 <div class="bg-black w-screen h-screen flex items-center justify-center" id="containerBlack">
-  <i class="fa-solid fa-ghost text-orange-500 text-[170px]"></i> <!-- Icona di Font Awesome -->
+  <!-- Icona centrale animata -->
+  <i
+    class="fa-solid fa-ghost text-orange-500 text-[170px] animate__animated animate__zoomIn animate__infinite animate__pulse"
+    data-aos="fade-in"
+    data-aos-duration="1500"
+    data-aos-delay="300"
+    style="filter: drop-shadow(0px 0px 15px orange);"
+    id="iconGhost">
+  </i>
 </div>
+
+<script>
+  // Inizializzazione AOS
+  AOS.init();
+
+  // Animazioni GSAP
+  gsap.to("#iconGhost", {
+    duration: 2,
+    scale: 1.2,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+  });
+
+  gsap.from("#containerBlack", {
+    duration: 1.5,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 0.3,
+  });
+</script>
